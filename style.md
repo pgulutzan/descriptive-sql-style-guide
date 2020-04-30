@@ -242,7 +242,7 @@ that follow.</p>
 
 <p>Choices are not inheritable because I do not classify well.</p>
 
-<h2>Keywords and letter case</h2>
+<h2>Keywords and letter case</h2><HR>
 
 <p>Choice: Keywords upper case or lower case?</p>
 
