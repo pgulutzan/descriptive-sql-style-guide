@@ -2,7 +2,6 @@
 <html>
 
 <head>
-<title>Descriptive SQL Style Guide</title>
 </head>
 
 <body>
