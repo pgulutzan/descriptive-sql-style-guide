@@ -348,7 +348,7 @@ Read the fine print of Microsoft's
 <a href="https://docs.microsoft.com/en-us/sql/database-engine/deprecated-database-engine-features-in-sql-server-2016?redirectedfrom=MSDN&view=sql-server-ver15">
 Deprecated Notice</a>.
 It says that the feature will be "supported in the next version"
-although it "will be deprecated in a later version", which they have been saying
+although it "will be deprecated in a later version", which they have been saying 
 for
 <a href="https://social.msdn.microsoft.com/Forums/sqlserver/en-US/a6201cf8-a7ca-45ec-918e-18646aa02f37/best-practice-use-of-semicolon-to-terminate-statements?forum=transactsql">
 over a decade</a>
@@ -458,7 +458,7 @@ Mazur says: "Include inner for inner joins", probably the reasoning again is tha
 Examples in vendor manuals seem to show INNER more often than not.</p>
 
 <p>[INTO] after INSERT<br>
-The word INTO is optional in MySQL/MariaDB and SQL Server,
+The word INTO is optional in MySQL/MariaDB and SQL Server, 
 but compulsory in DB2, Oracle, and the SQL standard.
 Holywell says:
 "Why you would willingly choose a proprietary solution when a standard SQL method already exists is beyond me."</p>
@@ -586,7 +586,7 @@ MySQL allows replacing -- with # for simple comments but that is rare.</p>
 nowadays all vendors support both types.
 Oddly, there are cases where bracketed comments are legal but simple comments are illegal,
 for example with DB2's <a href="https://www.idug.org/p/bl/et/blogaid=943">DSNTIAUL</a>
-and in standard PREPARE texts (General Rule 6 =
+and in standard PREPARE texts (General Rule 6 = 
 "If P [the contents of the SQL statement variable]
 does not conform to the Format, Syntax Rules, and Access Rules of a &lt;preparable statement&gt;,
 or if P contains a &lt;simple comment&gt; then ... an exception condition is raised: syntax error or access rule violation.").
@@ -695,7 +695,7 @@ Con: old style has a long-established base.</p>
 
 <p>Some bloggers give the wrong impression that Microsoft has deprecated old style joins and/or they are non-standard.
 In fact Microsoft only deprecated old style outer joins
-(see
+(see 
 <a href="https://www.red-gate.com/hub/product-learning/sql-prompt/finding-code-smells-using-sql-prompt-old-style-join-syntax-st001">
 this red-gate post</a>
 and
@@ -894,7 +894,7 @@ regarding placement of the operator (see section <a href="#format-symbols">Forma
 
 <p>Choice: Names should mean something?</p>
 
-<p>We all know the setting should be 'yes' but
+<p>We all know the setting should be 'yes' but 
 if you are trying to make a point about syntax,
 then a <a href="https://en.wikipedia.org/wiki/Metasyntactic_variable">placeholder name</a>
 has all the meaning that you need, because the referent could be anything at all.
@@ -1228,11 +1228,9 @@ and "A jar containing beans is labeled "beans"."</p>
 
 <p>Bloggers:</p>
 
-<p>Peter Gulutzan (also known as "I") said long ago in
+<p>Peter Gulutzan (also known as "I") said long ago in 
 <a href="http://www.dbazine.com/db2/db2-disarticles/gulutzan5/">"SQL Naming Conventions"</a>:
 Example: SELECT * FROM beans; not SELECT * FROM bean;</p>
-
-<p>Ben Brumm says in <a href='https://www.databasestar.com/sql-best-practices/'>SQL Best Practices and Style Guide</a> to use singular where you can.</p>
 
 <H3 id="names-of-temporary-tables">Names of temporary tables</H3><HR>
 
@@ -1340,7 +1338,7 @@ and a column referencing it should have referenced-table-name and suffix _id.</p
 
 <p>Holywell says: name = id is not okay ("avoid").</p>
 
-<p>Mazur says:
+<p>Mazur says: 
 "Boolean fields should be prefixed with is_, has_, or does_. For example, is_customer, has_unsubscribed, etc."</p>
 
 <p>Vendor manuals:</p>
@@ -1367,8 +1365,8 @@ Notice that SQL Server does capitalize when there is only one word, but probably
 points out</a> that qualifying id in SQL statements is not good enough
 if you also have to distinguish in a Java client.</p>
 
-<p>Power BI
-(apparently thinking about things like report headings)
+<p>Power BI 
+(apparently thinking about things like report headings) 
 <a href="https://www.sqlbi.com/articles/data-import-best-practices-in-power-bi/">says</a>:
 "For example, you should use “Sales Amount” instead of “SalesAmt” or “SalesAmount”.
 You can use space and special characters in column names of a view.
@@ -1410,7 +1408,7 @@ Salvisberg says: "Always use table aliases when your SQL statement involves more
 
 <p>Oracle: "AVG(salary) AS avgsal"</p>
 
-<p>SQL Server: "AVG(UnitPrice) AS [Average Price]" ...
+<p>SQL Server: "AVG(UnitPrice) AS [Average Price]" ... 
 an
 <a href="https://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2008-r2/ms179300(v=sql.105)?redirectedfrom=MSDN">
 old version of the manual</a>
@@ -1478,7 +1476,7 @@ Mullins asks: what if a constraint is both foreign-key and unique, what do the s
 <p>Vendor manuals:</p>
 
 <p>Oracle: (for foreign key) fk_deptno, fk_empid_hiredate,
-        (for check) check_divname, check_office,
+        (for check) check_divname, check_office, 
         (for not null) nn_qty, emp_salary_nn_demo
         (for unique) promo_id_u, wh_unq, emp_email_uk_demo
         (for primary key) loc_id_pk, sales_pk.</p>
@@ -1537,7 +1535,7 @@ Salvisberg says: name = table + column(s)-or-purposes + _idx.</p>
 <p>Vendor manual examples:</p>
 
 <p>Oracle: "cust_eff_ix ON customers", "ord_customer_ix ON orders", "idx_personnel ON CLUSTER personnel",
-        "area_index ON xwarehouses", "upper_ix ON employees (UPPER(last_name))",
+        "area_index ON xwarehouses", "upper_ix ON employees (UPPER(last_name))", 
         "income_ix ON employees(salary + (salary*commission_pct))", "cust_last_name_ix ON customers (cust_last_name)" etc.</p>
 
 <p>DB2: "UNIQUE_NAM ON PROJECT(PROJNAME)", "JOB_BY_DPT ON EMPLOYEE (WORKDEPT, JOB)", "IDX1 ON TAB1 (col1)",
@@ -1688,7 +1686,7 @@ The name of the function should answer the question “What is the outcome of th
 Optionally prefixed by a project abbreviation.</p>
 
 <p>Salvisberg says: (re procedure)
-Name is built from a verb followed by a noun. The name of the procedure should answer the question “What is done?”
+Name is built from a verb followed by a noun. The name of the procedure should answer the question “What is done?” 
 e.g. calculate_salary</p>
 
 <p>Bloggers:</p>
@@ -1862,7 +1860,7 @@ Then add white space according to Choices described in following Format sections
 
 <p><b>Indenting</b> means: adding
 <a href="https://www.lexico.com/definition/indent"> fixed amounts</a>
-("units") of whitespace at the start of a line.
+("units") of whitespace at the start of a line. 
 For example one can say that the indent amount is "4 spaces".
 Then in this statement the second line is indented:<pre>
 TEXT AT LEFT MARGIN, ALSO CALLED THE ZERO POINT
@@ -2019,7 +2017,7 @@ if the formatter always removes space before semicolon.</p>
 that are not in a list (see <a href="#format-lists">Format lists</a>).
 So the Choice affects function arguments like substring(1,2)
 or declarations like DECIMAL(5,3).
-Style guides for C, such as
+Style guides for C, such as 
 <a href="http://www.cs.umd.edu/~nelson/classes/resources/cstyleguide/">this one at umd.edu</a>, say
 "Leave one space after a comma", but are probably not applicable.</p>
 
@@ -2072,7 +2070,7 @@ so that it will be clear from the syntax what kind of routine you are calling.
 I am guessing that this happened because of C guidelines,
 for example <a href="https://users.ece.cmu.edu/~eno/coding/CCodingStandard.html">this one at cmu.edu</a>, that say
 "Do not put parens next to keywords. Put a space between.
-Do put parens next to function names.
+Do put parens next to function names. 
 Keywords are not functions. By putting parens next to keywords keywords and function names are made to look alike."
 The
 <a href="https://www.oracle.com/technetwork/java/codeconventions-150003.pdf">
@@ -2306,7 +2304,7 @@ and a smaller amount (for example 2) for later levels.</p>
 
 <p>Prescriptive guides:</p>
 
-<p>Benenson says: 2 spaces. Salvisberg says: 3 spaces. Mazur says: 4 spaces.
+<p>Benenson says: 2 spaces. Salvisberg says: 3 spaces. Mazur says: 4 spaces. 
 Holywell says: Indent column definitions by four (4) spaces within the CREATE definition.</p>
 
 <p>Vendors:</p>
@@ -2323,7 +2321,7 @@ they realize that some people prefer tabs.</p>
 
 <p>The Toad formatter default is 3 spaces.</p>
 
-<p>Andy Mallon
+<p>Andy Mallon 
 <a href="https://am2.co/2018/02/tsql-tuesday-99-tabs-vs-spaces/">
 goes into detail</a> why spaces are preferable.</p>
 
@@ -2926,8 +2924,8 @@ This fits with "same as for Formats list", "similar parts aligned", and
 "change AND/OR to newline + indent+1 + AND/OR".</p>
 
 <p>Mazur fits with "change AND/OR to AND/OR + newline + indent+0" (i.e. indent+1 from the where)<pre>
-where
-    ... and
+where 
+    ... and 
     ...</pre>
 Thus Mazur is the only one who says AND/OR-at-end.
 "all conditions within WHERE are indented (4 spaces), AND/OR is at end of line"</p>
@@ -2950,8 +2948,8 @@ WHERE ...
 WHERE NOT (job_id = 'PU_CLERK' AND department_id = 30)</pre></p>
 
 <p>Example from <a href="https://docs.microsoft.com/en-us/sql/t-sql/queries/where-transact-sql?view=sql-server-ver15">
-SQL Server:"</a><pre>
-WHERE EmployeeKey <= 500 AND LastName LIKE '%Smi%' AND FirstName LIKE '%A%';
+SQL Server:"</a><pre> 
+WHERE EmployeeKey <= 500 AND LastName LIKE '%Smi%' AND FirstName LIKE '%A%'; 
 Examples from DB2:
 WHERE WORKDEPT = 'E11' AND NOT JOB = 'ANALYST'
 +
@@ -3326,9 +3324,9 @@ say: "Everything after the AS keyword must be enclosed in parentheses."</p>
 Teradata manual</a> has<pre>
 CREATE VIEW dept AS
  SELECT   deptno(TITLE 'Department Number'),
-          deptname(TITLE 'Department Name'),
-          loc (TITLE 'Department Location'),
-          mgrno(TITLE 'Manager Number')
+          deptname(TITLE 'Department Name'), 
+          loc (TITLE 'Department Location'), 
+          mgrno(TITLE 'Manager Number') 
  FROM department;</pre>
 which is consistent with "AS + newline + fixed-indent + SELECT".</p>
 
@@ -3388,7 +3386,7 @@ shows the usual way, with newlines before and after AS.</p>
 <H3 id="format-create-trigger">Format CREATE TRIGGER</H3><HR>
 
 <p>Choice: change create-trigger clause to newline + indent+0 + create-trigger clause?
-
+                                                                                                                    
 This is not really different from the Choice for
 <a href="#format-create-procedure-or-create-function">Format CREATE PROCEDURE or CREATE FUNCTION</a>.
 We have an initial CREATE ... object_name, some modifiers, and then a triggered-action
@@ -4198,3 +4196,4 @@ Public License instead of this License.
 
 </body>
 </html>
+
