@@ -89,6 +89,9 @@ db2portal</a>.<br>
 Jeffrey Keller,
 <a href="https://www.vertabelo.com/blog/an-unemotional-logical-look-at-sql-server-naming-conventions/">
 "An Unemotional Logical Look at SQL Server Naming Conventions"</a>.<br>
+Ben Brumm,
+<a href="https://www.databasestar.com/sql-best-practices/">
+"SQL Best Practices and Style Guide"</a>.<br>
 </p>
 
 <p>For the "Format" sections I also consult this book chapter:<br>
@@ -1231,8 +1234,6 @@ and "A jar containing beans is labeled "beans"."</p>
 <p>Peter Gulutzan (also known as "I") said long ago in 
 <a href="http://www.dbazine.com/db2/db2-disarticles/gulutzan5/">"SQL Naming Conventions"</a>:
 Example: SELECT * FROM beans; not SELECT * FROM bean;</p>
-	
-<p>Ben Brumm says in <a href='https://www.databasestar.com/sql-best-practices/'>SQL Best Practices and Style Guide</a> that singular table names are preferred, but it's important to be consistent with your team and the existing database.</p>
 
 <H3 id="names-of-temporary-tables">Names of temporary tables</H3><HR>
 
