@@ -89,6 +89,9 @@ db2portal</a>.<br>
 Jeffrey Keller,
 <a href="https://www.vertabelo.com/blog/an-unemotional-logical-look-at-sql-server-naming-conventions/">
 "An Unemotional Logical Look at SQL Server Naming Conventions"</a>.<br>
+Ben Brumm,
+<a href="https://www.databasestar.com/sql-best-practices/">
+"SQL Best Practices and Style Guide"</a>.<br>
 </p>
 
 <p>For the "Format" sections I also consult this book chapter:<br>
