@@ -26,7 +26,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301  USA</p>
 <p>All references to "this program" or "software" mean "this guide", the Descriptive SQL Style Guide.
 The copy of the GNU General Public License is the final section of this guide.</p>
 
-<p>Version 0.1.0 2020-04-30</p>
+<p>Version 0.1.2 2022-06-15</p>
 
 <p>This is a descriptive style guide, like a dictionary that tells you what is common usage, with citations.
 To find common usage I looked at vendor manuals, expert blogs, and prescriptive style guides
@@ -36,7 +36,7 @@ To find common usage I looked at vendor manuals, expert blogs, and prescriptive 
 based on orthodoxy, logic, style used for another language's style guide, and chosen DBMS vendor.</p>
 
 <p>
-The prescriptive style guides are the ones on github, in English, that have more than 100 stars at time of writing:<br>
+The prescriptive style guides are the ones on GitHub, in English, that have more than 100 stars at time of writing:<br>
 Konstantin Taranov,
 <a href="https://github.com/ktaranov/sqlserver-kit/blob/master/SQL%20Server%20Name%20Convention%20and%20T-SQL%20Programming%20Style.md">
 SQL Server Name Convention and T-SQL Programming Style</a>,
@@ -67,7 +67,7 @@ SQL Style guide</a>.
 
 <p></p>
 
-<p>For the "Names" sections I also consult these non-github web pages because they have details about specific object types:<br>
+<p>For the "Names" sections I also consult these non-GitHub web pages because they have details about specific object types:<br>
 Tim Hall,
 <a href="https://oracle-base.com/articles/misc/naming-conventions">
 Oracle naming conventions</a>.<br>
@@ -647,19 +647,15 @@ Usually they are preceded or followed by newlines.</p>
 /*
   This comment is Style 1: Align start and end.
 */
-
 /*
  * This comment is Style 2: Align asterisks.
  */
-
 /*
 ** This comment is Style 3: Lines start with **.
 */
-
 /**
  * This comment is Style 4: Comment starts with **.
  */
-
 /*
 This comment is style 5: Comment ends on line end. */
 </pre></p>
@@ -796,7 +792,7 @@ Taranov says: "Always specify a length to any text-based data type such as varch
 <p>I just looked at the data types that were used in the manuals' CREATE TABLE examples.</p>
 
 <p>DB2: CHAR(n), CHAR (n), CLOB, CLOB(n), DATE, DECIMAL(n,n), DOUBLE, INTEGER, SMALLINT, TIMESTAMP, VARCHAR(n)
-(I thought it was interesting tht DOUBLE was used although DOUBLE PRECISION is standard)</p>
+(I thought it was interesting that DOUBLE was used although DOUBLE PRECISION is standard)</p>
 
 <p>Oracle: BLOB, CHAR(n), CLOB, DATE, NUMBER,, NUMBER(n), NUMBER(n,n), number(n), NCLOB, VARCHAR2(n), varchar2(n)
 (I thought it was interesting that CHAR(n) was used when n &lt;= 2 and NVARCHAR(n) was used when n &gt; 2 but doubt that is a rule)</p>
@@ -1208,7 +1204,7 @@ They're Consistent. It's possible to have a relation that holds a single row. Is
 They're unambiguous. Using only singular names means you do not need to determine how to pluralize nouns.
 Ex: Does a "Person" object go into a "Persons" relation or a "People" one? How about an "Octopus" object? Octopuses? Octopi? Octopodes?
 Straightforward 4GL Translation. Singular names allow you to directly translate from 4GL objects to database relations. You may need to remove some underscores and switch to camel case but the name translation will always be straight forward.
-Ex: team_member unambigously becomes the class TeamMember in Java or the variable team_member in Python."</p>
+Ex: team_member unambiguously becomes the class TeamMember in Java or the variable team_member in Python."</p>
 
 <p>Keller says: "At first glance, it’s natural to think of a collection of objects in the plural. A group of several individuals or companies would be Customers. Therefore, a table (being a collection of objects) should be named in the plural. An individual row in that table would be a single customer.
 The ISO/IEC naming principles, while dated, recommend pluralized table names and singular column names.
@@ -2447,9 +2443,12 @@ SET CONSTRAINTS c
 
 <p>BNF = SET SESSION CHARACTERISTICS AS &lt;session characteristics list&gt;<br>
 There are no clauses below SET. However, &lt;session characteristics list&gt;
-is subject to the "Format lists" choice like any other list
-but I said we will assume N = 5. So:<pre>
-SET SESSION CHARACTERISTICS AS TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;</pre></p>
+is subject to the
+<a href="#format-lists">Format lists</a>
+choice like any other list and let's say the Choice was to start with newline + indent+1.
+So:<pre>
+SET SESSION CHARACTERISTICS AS
+    TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;</pre></p>
 
 <p>BNF = UPDATE &lt;target table&gt; [ FOR PORTION OF &lt;application time period name&gt; FROM &lt;point in time 1&gt; TO &lt;point in time 2&gt; ] [ [ AS ] &lt;correlation name&gt; ] SET &lt;set clause list&gt; [ WHERE &lt;search condition&gt; ]<br>
 I will not use FOR or AS or or FROM or TO.
@@ -3698,43 +3697,35 @@ I am assuming indentation with 4 spaces, and space-before-semicolon = no.</p>
 <p><pre>
 DO ... END placement        Style
 --------------------        -----
-
 WHILE condition DO          K&amp;R and variants
     statement;
-    statement;   
+    statement;
 END WHILE;
-
 WHILE condition              Allman
 DO
     statement;
     statement;
 END WHILE;
-
 WHILE condition              GNU
     DO
         statements
     END WHILE;
-
 WHILE condition              Whitesmiths
     DO
     statements
     END WHILE;
-
 WHILE condition              Horstmann + Pico
 DO    statement;
       statement;
 END WHILE;
-
 WHILE condition DO            Ratliff
     statement;
     statement;
     END WHILE;
-
 WHILE condition               Lisp
     DO statement;
        statement;
 END WHILE;
-
 WHILE condition               Haskell
     DO statement
     ; statement
